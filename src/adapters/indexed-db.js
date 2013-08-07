@@ -29,7 +29,7 @@ Lawnchair.adapter('indexed-db', (function(){
   var getIDBDatabaseException = function() {
       return window.IDBDatabaseException || window.webkitIDBDatabaseException ||
           window.mozIDBDatabaseException || window.oIDBDatabaseException ||
-          window.msIDBDatabaseException;
+          window.msIDBDatabaseException || window.DOMException;
   };
   var useAutoIncrement = function() {
       // using preliminary mozilla implementation which doesn't support
